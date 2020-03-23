@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Prog.kiev.ua</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <p>Server massage:</p>
+        <p th:text="${message} ? ${message} : 'not massage'" />
+
+        <form action="/sendMessage" method="post" enctype="multipart/form-data">
+            Сообщение : <input type="text" name="textMessage"><br>
+            Фото : <input type="file" name="photo" multiple accept="image/*,image/jpeg">
+                <input type="submit" value="Отправить"></p>
+        </form>
+
+    </body>
+</html>
+
